@@ -38,7 +38,7 @@ math.html
 <head>
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-<title>Area of Surface</title>
+<title>Lamp Filament Power Calculator</title>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <style type="text/css">
 body {
@@ -72,23 +72,26 @@ h1 {
 <body>
 <div class="edge">
     <div class="box">
-        <h1>Surface Area of Right Cylinder</h1>
+        <h1>Lamp Filament Power Calculator</h1>
         <h3>NITHISH S (212224240105)</h3>
         <form method="POST">
-            {% csrf_token %}
+            
             <div class="formelt">
-                Radius: <input type="text" name="radius" value="{{r}}"></input>m<br/>
+                Intensity (I): <input type="text" name="intensity" value="{{I}}"></input> A<br/>
             </div>
             <div class="formelt">
-                Height: <input type="text" name="height" value="{{h}}"></input>m<br/>
+                Resistance (R): <input type="text" name="resistance" value="{{R}}"></input> Ω<br/>
             </div>
             <div class="formelt">
                 <input type="submit" value="Calculate"></input><br/>
             </div>
             <div class="formelt">
-                Area: <input type="text" name="area" value="{{area}}">m<sup>2</sup><br/>
+                Power (P): <input type="text" name="power" value="{{P}}"> W<br/>
             </div>
         </form>
+        <div class="formelt">
+            <b>Formula:</b> P = I<sup>2</sup>R
+        </div>
     </div>
 </div>
 </body>
@@ -133,7 +136,7 @@ urlpatterns = [
 ![alt text](SERVER.png)
 
 ## HOMEPAGE:
-![alt text](<Screenshot 2025-05-03 084639.png>)
+![Screenshot 2025-05-19 102052](https://github.com/user-attachments/assets/e0a33c00-082e-4cb3-bc77-3b25d2b5c26d)
 
 ## RESULT:
 The program for performing server side processing is completed successfully.
